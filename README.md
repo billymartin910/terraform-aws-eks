@@ -72,3 +72,4 @@ region = "us-east-2"
 ### Run below command 
 ```
 terraform_0.12.19 plan -var-file regions/ohio.tfvars 
+terraform_0.12.19 apply -var-file regions/ohio.tfvars
