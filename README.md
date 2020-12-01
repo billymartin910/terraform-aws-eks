@@ -1,6 +1,8 @@
 # This module creates EKS on multiple regions
 
+```
 ### Copy paste below code
+```
 data "aws_eks_cluster" "cluster" {
   name = module.my-cluster.cluster_id
 }
@@ -33,8 +35,8 @@ module "my-cluster" {
 }
 
 ```
-
 ### Copy paste to output file
+
 ```
 output "cluster_id" {
   value = "${module.my-cluster.cluster_id}"
@@ -53,7 +55,7 @@ output "workers_asg_names" {
 }
 
 
-
+```
 ### Terraform code takes values. Provide those 
 ```
 cluster_name = "my-cluster"
@@ -66,7 +68,7 @@ asg_min_size = 1
 region = "us-east-2"
 
 
-
+```
 ### Run below command 
+```
 terraform_0.12.19 plan -var-file regions/ohio.tfvars 
-terraform_0.12.19 apply -var-file regions/ohio.tfvars 
